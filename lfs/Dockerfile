@@ -1,4 +1,4 @@
-FROM sergeyzh/tomcat6:log4j
+FROM sergeyzh/tomcat6-log4j
 
 MAINTAINER Sergey Zhukov, sergey@jetbrains.com
 
