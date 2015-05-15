@@ -27,7 +27,8 @@ RUN wget -O /home/tomcat/wrapper-linux-x86-64-${WRAPPER_VER}.tar.gz ${WRAPPER_UR
              sed -f /wrapper.sed < wrapper/src/bin/sh.script.in > /etc/init.d/tomcat && \
              chmod a+x /etc/init.d/tomcat && \
              rm /wrapper.sed && \
-             rm -rf wrapper
+             rm -rf wrapper && \
+             rm wrapper-linux-x86-64-${WRAPPER_VER}.tar.gz
 
 # Adding cacerts file from current Java disto to "conf" directory of Tomcat
 RUN cp /usr/java64/current/jre/lib/security/cacerts /home/tomcat/apache-tomcat-current/conf/truststore
