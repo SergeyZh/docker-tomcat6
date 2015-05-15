@@ -1,18 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:log4j="http://jakarta.apache.org/log4j/"
     exclude-result-prefixes="xs"
     version="2.0">
     
-    <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
-    
-    
+    <xsl:output method="xml" doctype-public="-//log4j//DTD//EN" doctype-system="log4j.dtd"  encoding="UTF-8" indent="yes"/>
+
     <!--
         Copies all existing nodes.
     -->
 
    <xsl:template match="/">
+
+
         <log4j:configuration>
 
 	  <appender name="lfsError" class="org.apache.log4j.RollingFileAppender">
