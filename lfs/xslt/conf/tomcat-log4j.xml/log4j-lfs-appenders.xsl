@@ -18,7 +18,7 @@
         <log4j:configuration>
 
 	  <appender name="lfsError" class="org.apache.log4j.RollingFileAppender">
-	    <param name="File" value="${catalina.base}/logs/lfs-error.log"/>
+	    <param name="File" value="${{catalina.base}}/logs/lfs-error.log"/>
 	    <param name="MaxFileSize" value="10Mb"/>
 	    <param name="MaxBackupIndex" value="20"/>
 	    <layout class="org.apache.log4j.PatternLayout">
