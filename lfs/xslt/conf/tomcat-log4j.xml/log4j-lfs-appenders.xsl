@@ -38,7 +38,11 @@
 	    <appender-ref ref="lfsError" />
 	  </appender>
 
-          <xsl:copy-of select="log4j:configuration/*"/>
+          <xsl:copy-of select="log4j:configuration/*[name()!='root']"/>
+	<root>
+	    <xsl:copy-of select="log4j:configuration/root/*"/>
+	    <appender-ref ref="LFS"/>
+	</root>
 
         </log4j:configuration>
    </xsl:template>
